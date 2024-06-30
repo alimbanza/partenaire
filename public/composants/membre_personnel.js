@@ -1440,7 +1440,7 @@ class Update_structure extends React.Component {
                                 <Input label="Email" required="true" type="email" clas="form-control" taille="255" name="email" value={(this.state.email != '') ? this.state.email : email} change={this.email} />
                                 <Input label="Adresse physique" required="true" type="text" clas="form-control" taille="50" name="adresse_physique" value={(this.state.adresse_physique != '') ? this.state.adresse_physique : adresse_physique} inp={this.adresse_physique} />
                                 <Input label="Nouveau document" titre="seul le fichier .PDF est autorisé" type="file" accept="application/pdf" clas="form-control" taille="50" name="document" value={this.state.nouveau_document} inp={this.nouveau_document} />
-                                <a className="col-md-2" href={'http://localhost:8000/'+autorisation} target="_blank">Voir le document ?</a>
+                                <a className="col-md-2" href={'http://54.167.118.145:8003/'+autorisation} target="_blank">Voir le document ?</a>
                             </div><hr/>  
                             {(this.state.state_msg == 'attente') ? <i id="sp" className="fas fa-spinner fa-pulse" style={spinner}></i> : '' } 
                             <div className="form-group m-b-0 text-right">
