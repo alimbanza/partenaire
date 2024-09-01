@@ -9,7 +9,7 @@ const session 	    = require('express-session');
 const fileUpload    = require('express-fileupload');
 const Sequelize     = require('sequelize')
 
-var SequelizeStore = require('connect-session-sequelize')(session.Store);
+//var SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 //app.engine('hbs', engine({extname:'.hbs'}));
@@ -44,6 +44,7 @@ app.use(fileUpload());
 
 // create database, ensure 'mysql' in your package.json
 
+/*
 var sequelize = new Sequelize(
     "loanme",
     "root",
@@ -51,11 +52,11 @@ var sequelize = new Sequelize(
         "dialect": "mysql",
         "storage": "./session.mysql"
     });
-   
+*/ 
 app.use(session({
-    store: new SequelizeStore({
-      db: sequelize
-    }),
+    //store: new SequelizeStore({
+    //  db: sequelize
+    //}),
     saveUninitialized : false,
     resave: false, // we support the touch method so per the express-session docs this should be set to false
     proxy: true, // if you do SSL outside of node.

@@ -26,7 +26,7 @@ const MembreModel                   = require('../models/membre.model');
 const Monnaie_electroniqueModel     = require('../models/monnaie_electronique');
 const venteImModel                  = require('../models/vente_im.model');
 
-const sequelize = new Sequelize('loanme','root','',{
+const sequelize = new Sequelize('loanmesfn_db','admin','Admin2704@',{
     host    : 'localhost',
     dialect : 'mysql'
 });
